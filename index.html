@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mundo Limpieza – Productos de Limpieza y Bazar | Casilda, Santa Fe</title>
+<meta name="description" content="Mundo Limpieza: los mejores productos de limpieza y artículos de bazar en Casilda, Santa Fe. Amplio stock, precios accesibles. Consultá por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --azul:         #00AEEF;
+  --azul-medio:   #0092D0;
+  --azul-oscuro:  #0070A8;
+  --azul-profundo:#00355F;
+  --azul-navy:    #001F3F;
+  --verde-wa:     #25D366;
+  --verde-wa-dark:#1DA851;
+  --blanco:       #ffffff;
+  --gris-claro:   #F0F7FC;
+  --gris-borde:   #D4E8F5;
+  --texto:        #0D1B2A;
+  --texto-suave:  #4A6080;
+  --sombra-azul:  rgba(0,174,239,0.18);
+  --sombra-suave: rgba(0,55,95,0.08);
+}
+
+/* ============ TIPOGRAFÍA BASE ============ */
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--texto);
+  background: var(--blanco);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, .nav-nombre { font-family: 'Nunito', sans-serif; }
+
+/* ============ SCROLL SUAVE ============ */
+html { scroll-behavior: smooth; }
+
+/* ============ NAV ============ */
+nav {
+  position: sticky; top: 0; z-index: 300;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2.5rem;
+  height: 72px;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1.5px solid var(--gris-borde);
+  box-shadow: 0 2px 20px var(--sombra-suave);
+  transition: box-shadow 0.3s;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 0.75rem;
+  text-decoration: none;
+}
+.nav-logo-img-wrap {
+  width: 48px; height: 48px; border-radius: 50%;
+  overflow: hidden; flex-shrink: 0;
+  border: 2.5px solid var(--azul);
+  box-shadow: 0 0 0 4px rgba(0,174,239,0.1);
+}
+.nav-logo-img-wrap img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.nav-brand { line-height: 1.1; }
+.nav-nombre {
+  font-weight: 900; font-size: 1.18rem; color: var(--texto);
+  letter-spacing: -0.3px;
+}
+.nav-nombre span { color: var(--azul); }
+.nav-sub {
+  font-size: 0.62rem; color: var(--texto-suave);
+  font-weight: 600; letter-spacing: 1.8px; text-transform: uppercase; margin-top: 1px;
+}
+nav ul {
+  list-style: none; display: flex; gap: 0.25rem; align-items: center;
+}
+nav ul li a {
+  text-decoration: none; color: var(--texto-suave);
+  font-size: 0.875rem; font-weight: 600;
+  padding: 0.5rem 0.9rem; border-radius: 8px;
+  transition: all 0.2s;
+}
+nav ul li a:hover { color: var(--azul); background: rgba(0,174,239,0.07); }
+
+/* Hamburger */
+.nav-hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 6px;
+}
+.nav-hamburger span {
+  display: block; width: 24px; height: 2.5px;
+  background: var(--texto); border-radius: 2px; transition: all 0.3s;
+}
+
+/* Mobile menu */
+.nav-mobile-menu {
+  display: none; position: fixed; top: 72px; left: 0; right: 0;
+  background: white; border-bottom: 1px solid var(--gris-borde);
+  padding: 1rem 1.5rem 1.5rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  z-index: 299;
+}
+.nav-mobile-menu.open { display: block; }
+.nav-mobile-menu a {
+  display: block; text-decoration: none; color: var(--texto);
+  font-weight: 600; font-size: 1rem; padding: 0.75rem 0;
+  border-bottom: 1px solid var(--gris-borde);
+}
+.nav-mobile-menu a:last-child { border-bottom: none; }
+.nav-mobile-wa {
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  background: var(--verde-wa); color: white; border: none;
+  padding: 0.9rem 1.5rem; border-radius: 12px; width: 100%;
+  font-family: 'Nunito', sans-serif; font-size: 0.95rem; font-weight: 800;
+  cursor: pointer; text-decoration: none; margin-top: 1rem;
+  transition: background 0.2s;
+}
+
+.nav-cta {
+  display: flex; align-items: center; gap: 0.5rem;
+  background: var(--verde-wa); color: white; border: none;
+  padding: 0.6rem 1.4rem; border-radius: 100px;
+  font-family: 'Nunito', sans-serif; font-size: 0.85rem; font-weight: 800;
+  cursor: pointer; text-decoration: none;
+  transition: all 0.25s;
+  box-shadow: 0 4px 14px rgba(37,211,102,0.35);
+  white-space: nowrap;
+}
+.nav-cta:hover { background: var(--verde-wa-dark); transform: translateY(-1px); box-shadow: 0 6px 18px rgba(37,211,102,0.4); }
+
+/* ============ HERO ============ */
+.hero {
+  min-height: calc(100vh - 72px);
+  display: grid; grid-template-columns: 1.1fr 0.9fr;
+  align-items: center; gap: 3rem;
+  padding: 4rem 2.5rem 3rem;
+  background: linear-gradient(145deg, #F5FBFF 0%, var(--blanco) 60%);
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: -200px; right: -200px;
+  width: 700px; height: 700px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,174,239,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute; bottom: -100px; left: -100px;
+  width: 400px; height: 400px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,174,239,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-content { position: relative; z-index: 1; }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: rgba(0,174,239,0.1); color: var(--azul-oscuro);
+  font-size: 0.73rem; font-weight: 700; letter-spacing: 1.8px;
+  text-transform: uppercase; padding: 0.5rem 1.1rem; border-radius: 100px;
+  border: 1px solid rgba(0,174,239,0.3); margin-bottom: 1.5rem;
+  animation: fadeDown 0.6s ease both;
+}
+.dot-pulse {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--azul);
+  animation: pulse 2s ease infinite;
+}
+@keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.6; transform: scale(0.85); } }
+
+.hero h1 {
+  font-weight: 900;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  line-height: 1.07; color: var(--texto);
+  margin-bottom: 1.4rem; letter-spacing: -1.5px;
+  animation: fadeDown 0.6s 0.1s ease both;
+}
+.hl {
+  color: var(--azul);
+  background: linear-gradient(135deg, var(--azul), var(--azul-oscuro));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-desc {
+  font-size: 1.05rem; color: var(--texto-suave); line-height: 1.85;
+  max-width: 480px; margin-bottom: 2.5rem;
+  animation: fadeDown 0.6s 0.2s ease both;
+}
+.hero-btns {
+  display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;
+  animation: fadeDown 0.6s 0.3s ease both;
+}
+.btn-wa-hero {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  background: var(--verde-wa); color: white; border: none;
+  padding: 1rem 2rem; border-radius: 100px;
+  font-family: 'Nunito', sans-serif; font-size: 0.95rem; font-weight: 800;
+  cursor: pointer; transition: all 0.25s; text-decoration: none;
+  box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+}
+.btn-wa-hero:hover { background: var(--verde-wa-dark); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(37,211,102,0.45); }
+
+.btn-productos {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: white; color: var(--texto); border: 2px solid var(--gris-borde);
+  padding: 0.95rem 1.9rem; border-radius: 100px;
+  font-family: 'Nunito', sans-serif; font-size: 0.95rem; font-weight: 800;
+  cursor: pointer; transition: all 0.25s; text-decoration: none;
+  box-shadow: 0 2px 10px var(--sombra-suave);
+}
+.btn-productos:hover { border-color: var(--azul); color: var(--azul); transform: translateY(-2px); }
+
+.hero-trust {
+  display: flex; align-items: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap;
+  animation: fadeDown 0.6s 0.4s ease both;
+}
+.trust-item {
+  display: flex; align-items: center; gap: 0.4rem;
+  font-size: 0.8rem; color: var(--texto-suave); font-weight: 600;
+}
+.trust-check { color: var(--azul); font-size: 1rem; }
+
+/* Hero visual */
+.hero-visual {
+  display: flex; align-items: center; justify-content: center;
+  position: relative; z-index: 1;
+  animation: fadeUp 0.8s 0.2s ease both;
+}
+.hero-logo-ring {
+  position: relative;
+  width: 360px; height: 360px;
+}
+.ring-outer {
+  position: absolute; inset: -16px; border-radius: 50%;
+  border: 2px dashed rgba(0,174,239,0.2);
+  animation: spinSlow 20s linear infinite;
+}
+.ring-middle {
+  position: absolute; inset: -6px; border-radius: 50%;
+  border: 3px solid rgba(0,174,239,0.15);
+}
+.hero-logo-wrap {
+  width: 360px; height: 360px; border-radius: 50%;
+  overflow: hidden; display: flex; align-items: center; justify-content: center;
+  background: white;
+  border: 4px solid var(--azul);
+  box-shadow:
+    0 0 0 16px rgba(0,174,239,0.07),
+    0 30px 80px rgba(0,174,239,0.2),
+    0 8px 24px rgba(0,0,0,0.08);
+  position: relative; z-index: 2;
+}
+.hero-logo-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Burbujas flotantes */
+.burbuja {
+  position: absolute; border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.6), var(--azul));
+  animation: flotarBurbuja var(--dur, 4s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+  opacity: var(--op, 0.7);
+  z-index: 3;
+}
+.b1 { width: 24px; height: 24px; top: 20px; right: 50px; --dur: 3.8s; }
+.b2 { width: 15px; height: 15px; top: 50px; right: 25px; --dur: 4.5s; --delay: 0.5s; --op: 0.5; }
+.b3 { width: 10px; height: 10px; top: 10px; right: 80px; --dur: 3.2s; --delay: 1s; --op: 0.35; }
+.b4 { width: 20px; height: 20px; bottom: 40px; left: 35px; --dur: 4.2s; --delay: 0.7s; }
+.b5 { width: 13px; height: 13px; bottom: 20px; left: 65px; --dur: 3.6s; --delay: 1.3s; --op: 0.5; }
+.b6 { width: 9px; height: 9px; bottom: 65px; left: 20px; --dur: 5s; --delay: 2s; --op: 0.35; }
+.b7 { width: 16px; height: 16px; top: 50%; right: -5px; --dur: 4s; --delay: 0.3s; --op: 0.45; }
+
+@keyframes flotarBurbuja {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-14px) scale(1.05); }
+}
+@keyframes spinSlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* ============ STATS BAR ============ */
+.stats-bar {
+  background: linear-gradient(135deg, var(--azul-profundo) 0%, var(--azul-navy) 100%);
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  position: relative; overflow: hidden;
+}
+.stats-bar::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300AEEF' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+  pointer-events: none;
+}
+.stat-item {
+  padding: 2.5rem 2rem; text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.07);
+  position: relative;
+}
+.stat-item:last-child { border-right: none; }
+.stat-accent {
+  position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 48px; height: 3px; background: var(--azul); border-radius: 2px 2px 0 0;
+}
+.stat-num {
+  font-family: 'Nunito', sans-serif;
+  font-size: 2.8rem; color: var(--azul);
+  font-weight: 900; line-height: 1; margin-bottom: 0.4rem;
+}
+.stat-label {
+  font-size: 0.82rem; color: rgba(255,255,255,0.5);
+  font-weight: 600; letter-spacing: 0.5px;
+}
+
+/* ============ SECCIONES GENERALES ============ */
+section { padding: 5.5rem 2.5rem; }
+.section-eyebrow {
+  display: flex; align-items: center; gap: 0.6rem;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 2.5px;
+  text-transform: uppercase; color: var(--azul); margin-bottom: 0.7rem;
+}
+.section-eyebrow::before {
+  content: ''; width: 28px; height: 2.5px; background: var(--azul); border-radius: 2px;
+}
+.section-title {
+  font-family: 'Nunito', sans-serif; font-weight: 900;
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  color: var(--texto); line-height: 1.1; letter-spacing: -0.8px; margin-bottom: 1rem;
+}
+.section-sub { font-size: 1rem; color: var(--texto-suave); max-width: 520px; line-height: 1.8; }
+
+/* ============ SOBRE NOSOTROS ============ */
+.sobre { background: var(--gris-claro); }
+.sobre-inner { max-width: 1200px; margin: 0 auto; }
+.sobre-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 5rem; align-items: center; margin-top: 3.5rem;
+}
+.sobre-img-col { display: flex; flex-direction: column; gap: 1.5rem; }
+.sobre-logo-card {
+  border-radius: 28px; overflow: hidden;
+  background: linear-gradient(135deg, var(--azul-profundo), var(--azul-navy));
+  display: flex; align-items: center; justify-content: center;
+  padding: 3rem; box-shadow: 0 20px 60px rgba(0,55,95,0.2);
+  position: relative;
+}
+.sobre-logo-card::before {
+  content: '';
+  position: absolute; top: -50px; right: -50px;
+  width: 200px; height: 200px; border-radius: 50%;
+  background: rgba(0,174,239,0.1);
+}
+.sobre-logo-card img {
+  width: 220px; height: 220px; object-fit: contain; border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.3);
+  position: relative; z-index: 1;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+.sobre-direccion-card {
+  background: white; border-radius: 20px; padding: 1.5rem;
+  border: 1.5px solid var(--gris-borde);
+  display: flex; align-items: center; gap: 1rem;
+  box-shadow: 0 4px 20px var(--sombra-suave);
+}
+.dir-icon {
+  width: 52px; height: 52px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--azul), var(--azul-oscuro));
+  border-radius: 14px; display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+}
+.dir-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--azul); font-weight: 700; }
+.dir-val { font-size: 0.95rem; color: var(--texto); font-weight: 600; margin-top: 0.2rem; }
+
+.sobre-texto p {
+  font-size: 1rem; color: var(--texto-suave); line-height: 1.9; margin-bottom: 1.1rem;
+}
+.sobre-texto p strong { color: var(--texto); }
+
+.valores { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+.valor-item {
+  display: flex; align-items: flex-start; gap: 1rem;
+  background: white; padding: 1rem 1.25rem; border-radius: 16px;
+  border: 1.5px solid var(--gris-borde);
+  transition: all 0.25s;
+}
+.valor-item:hover { border-color: var(--azul); box-shadow: 0 6px 20px var(--sombra-azul); transform: translateX(4px); }
+.valor-icon {
+  width: 42px; height: 42px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--azul), var(--azul-oscuro));
+  border-radius: 12px; display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; color: white;
+}
+.valor-text strong { display: block; font-size: 0.9rem; color: var(--texto); font-weight: 700; margin-bottom: 0.15rem; }
+.valor-text span { font-size: 0.82rem; color: var(--texto-suave); }
+
+/* ============ PRODUCTOS ============ */
+.productos { background: var(--blanco); }
+.productos-inner { max-width: 1200px; margin: 0 auto; }
+.productos-header {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  margin-bottom: 3rem; flex-wrap: wrap; gap: 1.5rem;
+}
+.productos-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+}
+.prod-card {
+  border: 1.5px solid var(--gris-borde); border-radius: 22px;
+  padding: 2rem 1.6rem; transition: all 0.3s;
+  background: white; position: relative; overflow: hidden;
+  cursor: pointer;
+}
+.prod-card-glow {
+  position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--azul), var(--azul-oscuro));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px 2px 0 0;
+}
+.prod-card:hover .prod-card-glow { transform: scaleX(1); }
+.prod-card:hover {
+  border-color: rgba(0,174,239,0.4);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 56px rgba(0,174,239,0.12);
+}
+.prod-icon-wrap {
+  width: 58px; height: 58px; border-radius: 16px;
+  background: var(--gris-claro); display: flex; align-items: center; justify-content: center;
+  font-size: 2rem; margin-bottom: 1.2rem;
+  transition: background 0.25s;
+}
+.prod-card:hover .prod-icon-wrap { background: rgba(0,174,239,0.1); }
+.prod-cat {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--azul); margin-bottom: 0.4rem;
+}
+.prod-nombre {
+  font-family: 'Nunito', sans-serif; font-size: 1.08rem;
+  color: var(--texto); font-weight: 900; margin-bottom: 0.6rem;
+}
+.prod-desc {
+  font-size: 0.85rem; color: var(--texto-suave); line-height: 1.7;
+}
+.prod-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 1.2rem; padding-top: 1rem;
+  border-top: 1px solid var(--gris-borde);
+}
+.prod-tag {
+  background: rgba(0,174,239,0.1); color: var(--azul-oscuro);
+  font-size: 0.7rem; padding: 0.3rem 0.8rem; border-radius: 100px;
+  font-weight: 700; letter-spacing: 0.5px;
+}
+.prod-consultar {
+  font-size: 0.78rem; color: var(--azul); font-weight: 700;
+  text-decoration: none; display: flex; align-items: center; gap: 0.3rem;
+  transition: gap 0.2s;
+}
+.prod-card:hover .prod-consultar { gap: 0.5rem; }
+
+/* Banda CTA productos */
+.productos-cta {
+  margin-top: 3rem; text-align: center;
+  background: linear-gradient(135deg, var(--gris-claro), rgba(0,174,239,0.06));
+  border: 1.5px solid var(--gris-borde); border-radius: 24px;
+  padding: 2.5rem; display: flex; flex-direction: column; align-items: center; gap: 1rem;
+}
+.productos-cta p { font-size: 1.05rem; color: var(--texto-suave); }
+.productos-cta p strong { color: var(--texto); }
+
+/* ============ CONTACTO ============ */
+.contacto {
+  background: linear-gradient(155deg, var(--azul-profundo) 0%, var(--azul-navy) 100%);
+  color: white; position: relative; overflow: hidden;
+}
+.contacto::before {
+  content: '';
+  position: absolute; top: -150px; right: -150px;
+  width: 600px; height: 600px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,174,239,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.contacto::after {
+  content: '';
+  position: absolute; bottom: -100px; left: -100px;
+  width: 400px; height: 400px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,174,239,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.contacto-inner { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; }
+.contacto .section-eyebrow { color: var(--azul); }
+.contacto .section-eyebrow::before { background: var(--azul); }
+.contacto .section-title { color: white; }
+.contacto .section-sub { color: rgba(255,255,255,0.6); }
+
+/* CTA WhatsApp destacado */
+.wa-cta-box {
+  background: rgba(37,211,102,0.12);
+  border: 2px solid rgba(37,211,102,0.35);
+  border-radius: 24px; padding: 2.5rem;
+  margin-top: 2rem; margin-bottom: 3rem;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 2rem; flex-wrap: wrap;
+}
+.wa-cta-txt h3 { font-family: 'Nunito', sans-serif; font-size: 1.5rem; font-weight: 900; margin-bottom: 0.4rem; }
+.wa-cta-txt p { color: rgba(255,255,255,0.65); font-size: 0.95rem; }
+.btn-wa-grande {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  background: var(--verde-wa); color: white; border: none;
+  padding: 1.1rem 2.2rem; border-radius: 100px;
+  font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 800;
+  cursor: pointer; transition: all 0.25s; text-decoration: none;
+  box-shadow: 0 8px 28px rgba(37,211,102,0.4);
+  white-space: nowrap; flex-shrink: 0;
+}
+.btn-wa-grande:hover { background: var(--verde-wa-dark); transform: translateY(-3px); box-shadow: 0 12px 36px rgba(37,211,102,0.5); }
+
+.contacto-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; align-items: start;
+}
+.info-items { display: flex; flex-direction: column; gap: 1.2rem; }
+.info-item {
+  display: flex; align-items: flex-start; gap: 1.1rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 1.2rem 1.4rem; border-radius: 16px;
+  transition: all 0.25s;
+}
+.info-item:hover { background: rgba(255,255,255,0.08); border-color: rgba(0,174,239,0.3); }
+.info-ico {
+  width: 48px; height: 48px; flex-shrink: 0;
+  background: rgba(0,174,239,0.15);
+  border: 1px solid rgba(0,174,239,0.3);
+  border-radius: 14px; display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+}
+.info-label {
+  font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--azul); font-weight: 700; margin-bottom: 0.3rem;
+}
+.info-val { font-size: 0.95rem; color: white; line-height: 1.6; }
+.info-val a { color: var(--azul); text-decoration: none; font-weight: 700; }
+.info-val a:hover { text-decoration: underline; }
+
+/* Panel formulario */
+.form-panel {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 24px; padding: 2rem;
+}
+.form-panel h3 {
+  font-family: 'Nunito', sans-serif; font-size: 1.2rem; font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+.form-panel p { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1.5rem; }
+.form-group { margin-bottom: 0.9rem; }
+.form-group input, .form-group textarea {
+  width: 100%; padding: 0.95rem 1.2rem;
+  background: rgba(255,255,255,0.07);
+  border: 1.5px solid rgba(255,255,255,0.12);
+  border-radius: 14px; color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem;
+  outline: none; transition: border 0.2s; resize: none;
+}
+.form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.28); }
+.form-group input:focus, .form-group textarea:focus {
+  border-color: var(--azul); background: rgba(255,255,255,0.1);
+}
+.btn-wa-form {
+  display: flex; align-items: center; justify-content: center; gap: 0.7rem;
+  background: var(--verde-wa); color: white; border: none;
+  padding: 1rem 1.8rem; border-radius: 14px;
+  font-family: 'Nunito', sans-serif; font-size: 0.95rem; font-weight: 800;
+  cursor: pointer; transition: all 0.25s; width: 100%; margin-top: 0.5rem;
+  text-decoration: none; box-shadow: 0 6px 20px rgba(37,211,102,0.3);
+}
+.btn-wa-form:hover { background: var(--verde-wa-dark); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(37,211,102,0.4); }
+
+/* ============ FOOTER ============ */
+footer {
+  background: #020C15;
+  color: rgba(255,255,255,0.35);
+  padding: 1.8rem 2.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 0.82rem; flex-wrap: wrap; gap: 0.75rem;
+}
+.footer-logo { display: flex; align-items: center; gap: 0.6rem; }
+.footer-logo img {
+  width: 36px; height: 36px; border-radius: 50%; object-fit: cover;
+  border: 1.5px solid rgba(0,174,239,0.35);
+}
+.footer-logo span { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 0.95rem; color: rgba(255,255,255,0.7); }
+.footer-logo span em { color: var(--azul); font-style: normal; }
+.footer-info { display: flex; flex-direction: column; align-items: flex-end; gap: 0.2rem; text-align: right; }
+footer strong { color: rgba(255,255,255,0.65); }
+.footer-azul { color: var(--azul); font-weight: 700; }
+
+/* ============ BOTÓN FLOTANTE WA ============ */
+.wa-float {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
+  display: flex; align-items: center; gap: 0; overflow: hidden;
+  height: 62px; border-radius: 100px;
+  background: var(--verde-wa); text-decoration: none;
+  box-shadow: 0 8px 28px rgba(37,211,102,0.5);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  max-width: 62px;
+}
+.wa-float:hover { max-width: 280px; box-shadow: 0 12px 36px rgba(37,211,102,0.6); transform: translateY(-2px); }
+.wa-float-icon { width: 62px; height: 62px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.wa-float-icon svg { width: 32px; height: 32px; fill: white; }
+.wa-float-label {
+  color: white; font-family: 'Nunito', sans-serif; font-size: 0.9rem; font-weight: 800;
+  white-space: nowrap; padding-right: 1.2rem; opacity: 0;
+  transition: opacity 0.2s 0.1s;
+}
+.wa-float:hover .wa-float-label { opacity: 1; }
+
+/* Ping en el botón flotante */
+.wa-float-ping {
+  position: absolute; top: 8px; right: 8px; width: 14px; height: 14px;
+}
+.wa-float-ping::before, .wa-float-ping::after {
+  content: ''; position: absolute; inset: 0; border-radius: 50%; background: #FF4444;
+}
+.wa-float-ping::before { animation: ping 1.8s ease-out infinite; opacity: 0; }
+@keyframes ping { 0% { transform: scale(1); opacity: 0.8; } 100% { transform: scale(2.5); opacity: 0; } }
+
+/* ============ ANIMACIONES ENTRADA ============ */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+  .hero { gap: 2rem; }
+  .hero-logo-ring, .hero-logo-wrap { width: 300px; height: 300px; }
+  .sobre-grid { gap: 3rem; }
+  .contacto-grid { gap: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+  nav { padding: 0 1.2rem; }
+  nav ul, .nav-cta { display: none; }
+  .nav-hamburger { display: flex; }
+
+  .hero {
+    grid-template-columns: 1fr; padding: 2.5rem 1.5rem 3rem;
+    min-height: auto; gap: 2.5rem; text-align: center;
+  }
+  .hero::before, .hero::after { display: none; }
+  .hero-desc { margin-left: auto; margin-right: auto; }
+  .hero-btns { justify-content: center; }
+  .hero-trust { justify-content: center; }
+  .hero-visual { order: -1; }
+  .hero-logo-ring, .hero-logo-wrap { width: 260px; height: 260px; }
+
+  .stats-bar { grid-template-columns: 1fr; }
+  .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .stat-item:last-child { border-bottom: none; }
+
+  section { padding: 4rem 1.5rem; }
+
+  .sobre-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .sobre-logo-card img { width: 180px; height: 180px; }
+
+  .productos-grid { grid-template-columns: repeat(2, 1fr); }
+  .productos-header { flex-direction: column; align-items: flex-start; }
+
+  .wa-cta-box { flex-direction: column; text-align: center; }
+  .btn-wa-grande { width: 100%; justify-content: center; }
+  .contacto-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+  footer { flex-direction: column; text-align: center; align-items: center; }
+  .footer-info { align-items: center; text-align: center; }
+
+  .wa-float { max-width: 62px; }
+  .wa-float:hover { max-width: 62px; }
+  .wa-float-label { display: none; }
+}
+
+@media (max-width: 520px) {
+  .productos-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.2rem; }
+  .btn-wa-hero, .btn-productos { width: 100%; justify-content: center; }
+  .hero-btns { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== BOTÓN FLOTANTE WA ===== -->
+<a class="wa-float"
+   href="https://wa.me/543464593104?text=Hola%20Mundo%20Limpieza!%20Quiero%20consultar%20por%20productos"
+   target="_blank" rel="noopener" aria-label="Consultar por WhatsApp">
+  <div class="wa-float-ping"></div>
+  <div class="wa-float-icon">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </div>
+  <span class="wa-float-label">Consultar por WhatsApp</span>
+</a>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <a class="nav-logo" href="#inicio">
+    <div class="nav-logo-img-wrap">
+      <img src="logo.jpeg" alt="Mundo Limpieza">
+    </div>
+    <div class="nav-brand">
+      <div class="nav-nombre">MUNDO <span>LIMPIEZA</span></div>
+      <div class="nav-sub">Casilda · Santa Fe</div>
+    </div>
+  </a>
+
+  <ul>
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#productos">Productos</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+
+  <a class="nav-cta"
+     href="https://wa.me/543464593104?text=Hola%20Mundo%20Limpieza!%20Quiero%20consultar%20por%20productos"
+     target="_blank" rel="noopener">
+    <svg style="width:16px;height:16px;fill:white;flex-shrink:0" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    Consultar por WhatsApp
+  </a>
+
+  <button class="nav-hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu -->
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="#inicio" onclick="closeMobile()">Inicio</a>
+  <a href="#nosotros" onclick="closeMobile()">Nosotros</a>
+  <a href="#productos" onclick="closeMobile()">Productos</a>
+  <a href="#contacto" onclick="closeMobile()">Contacto</a>
+  <a class="nav-mobile-wa"
+     href="https://wa.me/543464593104?text=Hola%20Mundo%20Limpieza!%20Quiero%20consultar%20por%20productos"
+     target="_blank" rel="noopener">
+    <svg style="width:18px;height:18px;fill:white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    Consultar por WhatsApp
+  </a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <div class="hero-badge"><span class="dot-pulse"></span> Limpieza &amp; Bazar · Casilda, Santa Fe</div>
+    <h1>Todo para un hogar<br><span class="hl">impecable</span></h1>
+    <p class="hero-desc">En Mundo Limpieza encontrás los mejores productos de limpieza y artículos de bazar. Calidad, variedad y la atención cercana que merecés, en el corazón de Casilda.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/543464593104?text=Hola%20Mundo%20Limpieza!%20Quiero%20consultar%20por%20productos"
+         target="_blank" rel="noopener" class="btn-wa-hero">
+        <svg style="width:20px;height:20px;fill:white;flex-shrink:0" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Consultar por WhatsApp
+      </a>
+      <a href="#productos" class="btn-productos">Ver productos →</a>
+    </div>
+    <div class="hero-trust">
+      <span class="trust-item"><span class="trust-check">✓</span> +500 productos</span>
+      <span class="trust-item"><span class="trust-check">✓</span> +10 años de experiencia</span>
+      <span class="trust-item"><span class="trust-check">✓</span> Atención personalizada</span>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-logo-ring">
+      <div class="ring-outer"></div>
+      <div class="ring-middle"></div>
+      <div class="hero-logo-wrap">
+        <img src="logo.jpeg" alt="Mundo Limpieza – Productos de limpieza y bazar en Casilda">
+      </div>
+    </div>
+    <div class="burbuja b1"></div>
+    <div class="burbuja b2"></div>
+    <div class="burbuja b3"></div>
+    <div class="burbuja b4"></div>
+    <div class="burbuja b5"></div>
+    <div class="burbuja b6"></div>
+    <div class="burbuja b7"></div>
+  </div>
+</section>
+
+<!-- ===== STATS BAR ===== -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-num">+500</div>
+    <div class="stat-label">Productos disponibles</div>
+    <div class="stat-accent"></div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">+10</div>
+    <div class="stat-label">Años de experiencia</div>
+    <div class="stat-accent"></div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Atención personalizada</div>
+    <div class="stat-accent"></div>
+  </div>
+</div>
+
+<!-- ===== SOBRE NOSOTROS ===== -->
+<section class="sobre" id="nosotros">
+  <div class="sobre-inner">
+    <div class="section-eyebrow">Quiénes somos</div>
+    <div class="section-title">Tu aliado en limpieza<br>y artículos del <span class="hl">hogar</span></div>
+    <div class="sobre-grid">
+      <div class="sobre-img-col">
+        <div class="sobre-logo-card">
+          <img src="logo.jpeg" alt="Mundo Limpieza">
+        </div>
+        <div class="sobre-direccion-card">
+          <div class="dir-icon">📍</div>
+          <div>
+            <div class="dir-label">Dónde encontrarnos</div>
+            <div class="dir-val">Bv. Ovidio Lagos 1365 · Casilda, Santa Fe</div>
+          </div>
+        </div>
+      </div>
+      <div class="sobre-texto">
+        <p>Somos <strong>Mundo Limpieza</strong>, un negocio familiar ubicado en Casilda, Santa Fe. Nos dedicamos a la venta de productos de limpieza y artículos de bazar, con amplio stock y los mejores precios para que tu hogar siempre esté impecable.</p>
+        <p>Nuestra misión es simple: encontrás todo lo que necesitás en un solo lugar, con la calidez y la atención cercana que solo los negocios de barrio pueden ofrecer.</p>
+        <div class="valores">
+          <div class="valor-item">
+            <div class="valor-icon">✓</div>
+            <div class="valor-text">
+              <strong>Calidad garantizada</strong>
+              <span>Trabajamos con las mejores marcas del mercado</span>
+            </div>
+          </div>
+          <div class="valor-item">
+            <div class="valor-icon">★</div>
+            <div class="valor-text">
+              <strong>Atención cercana y personalizada</strong>
+              <span>Te asesoramos para encontrar el producto ideal</span>
+            </div>
+          </div>
+          <div class="valor-item">
+            <div class="valor-icon">📦</div>
+            <div class="valor-text">
+              <strong>Amplio stock siempre disponible</strong>
+              <span>Todo en un mismo lugar, sin tener que buscar más</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCTOS ===== -->
+<section class="productos" id="productos">
+  <div class="productos-inner">
+    <div class="productos-header">
+      <div>
+        <div class="section-eyebrow">Catálogo</div>
+        <div class="section-title">Nuestros <span class="hl">productos</span></div>
+      </div>
+      <div class="section-sub">Limpieza profesional y del hogar, bazar, descartables y mucho más.</div>
+    </div>
+    <div class="productos-grid">
+      <div class="prod-card">
+        <div class="prod-card-glow"></div>
+        <div class="prod-icon-wrap">🧴</div>
+        <div class="prod-cat">Limpieza</div>
+        <div class="prod-nombre">Detergentes y líquidos</div>
+        <div class="prod-desc">Detergentes, lavandina, desengrasantes y limpiadores para cada rincón del hogar.</div>
+        <div class="prod-footer">
+          <span class="prod-tag">Gran variedad</span>
+          <a href="https://wa.me/543464593104?text=Hola%20Mundo%20Limpieza!%20Quiero%20consultar%20por%20productos" target="_blank" class="prod-consultar">Consultar →</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-card-glow"></div>
+        <div class="prod-icon-wrap">🧽</div>
+        <div class="prod-cat">Accesorios</div>
+        <div class="prod-nombre">Trapos y esponjas</div>
+        <div class="prod-desc">Trapos de piso, esponjas, estropajos, guantes y accesorios de limpieza profesional.</div>
+        <div class="prod-footer">
+          <span class="prod-tag">Siempre stock</span>
+          <a href="https://wa.me/543464593104?text=Hola%20Mundo%20Limpieza!%20Quiero%20consultar%20por%20productos" target="_blank" class="prod-consultar">Consultar →</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-card-glow"></div>
+        <div class="prod-icon-wrap">🪣</div>
+        <div class="prod-cat">Utensilios</div>
+        <div class="prod-nombre">Baldes y escobas</div>
+        <div class="prod-desc">Escobas, lampazos, baldes, palas y todo lo que necesitás para una limpieza profunda.</div>
+        <div class="prod-footer">
+          <span class="prod-tag">Mejores precios</span>
+          <a href="https://wa.me/543464593104?text=Hola%20Mundo%20Limpieza!%20Quiero%20consultar%20por%20productos" target="_blank" class="prod-consultar">Consultar →</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-card-glow"></div>
+        <div class="prod-icon-wrap">🍽️</div>
+        <div class="prod-cat">Bazar</div>
+        <div class="prod-nombre">Vajilla y cocina</div>
+        <div class="prod-desc">Platos, vasos, cubiertos, ollas y artículos de cocina para equipar tu hogar completo.</div>
+        <div class="prod-footer">
+          <span class="prod-tag">Alta calidad</span>
+          <a href="https://wa.me/543464593104?text=Hola%20Mundo%20Limpieza!%20Quiero%20consultar%20por%20productos" target="_blank" class="prod-consultar">Consultar →</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-card-glow"></div>
+        <div class="prod-icon-wrap">🛁</div>
+        <div class="prod-cat">Bazar</div>
+        <div class="prod-nombre">Artículos de baño</div>
+        <div class="prod-desc">Toallas, jaboneras, porta rollos, organizadores y todo para tener un baño impecable.</div>
+        <div class="prod-footer">
+          <span class="prod-tag">Novedades</span>
+          <a href="https://wa.me/543464593104?text=Hola%20Mundo%20Limpieza!%20Quiero%20consultar%20por%20productos" target="_blank" class="prod-consultar">Consultar →</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-card-glow"></div>
+        <div class="prod-icon-wrap">📦</div>
+        <div class="prod-cat">Descartables</div>
+        <div class="prod-nombre">Bolsas y descartables</div>
+        <div class="prod-desc">Bolsas de residuos, film, papel aluminio, servilletas y más. También al por mayor.</div>
+        <div class="prod-footer">
+          <span class="prod-tag">Al por mayor</span>
+          <a href="https://wa.me/543464593104?text=Hola%20Mundo%20Limpieza!%20Quiero%20consultar%20por%20productos" target="_blank" class="prod-consultar">Consultar →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="productos-cta">
+      <p><strong>¿No encontrás lo que buscás?</strong> Escribinos y te avisamos si lo tenemos en stock.</p>
+      <a href="https://wa.me/543464593104?text=Hola%20Mundo%20Limpieza!%20Quiero%20consultar%20por%20productos"
+         target="_blank" rel="noopener" class="btn-wa-hero" style="font-size:0.92rem; padding:0.9rem 1.8rem;">
+        <svg style="width:18px;height:18px;fill:white;flex-shrink:0" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Consultar disponibilidad por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACTO ===== -->
+<section class="contacto" id="contacto">
+  <div class="contacto-inner">
+    <div class="section-eyebrow">Contacto</div>
+    <div class="section-title">¿Cómo <span class="hl">llegarnos</span>?</div>
+    <div class="section-sub">Visitanos, llamanos o escribinos por WhatsApp. Siempre listos para atenderte.</div>
+
+    <!-- CTA WhatsApp destacado -->
+    <div class="wa-cta-box">
+      <div class="wa-cta-txt">
+        <h3>💬 La forma más rápida de contactarnos</h3>
+        <p>Respondemos en minutos. Consultá precios, disponibilidad o hacé tu pedido directamente.</p>
+      </div>
+      <a href="https://wa.me/543464593104?text=Hola%20Mundo%20Limpieza!%20Quiero%20consultar%20por%20productos"
+         target="_blank" rel="noopener" class="btn-wa-grande">
+        <svg style="width:22px;height:22px;fill:white;flex-shrink:0" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Consultar por WhatsApp
+      </a>
+    </div>
+
+    <div class="contacto-grid">
+      <!-- Info de contacto -->
+      <div class="info-items">
+        <div class="info-item">
+          <div class="info-ico">📍</div>
+          <div>
+            <div class="info-label">Dirección</div>
+            <div class="info-val">Bv. Ovidio Lagos 1365<br>Casilda, Santa Fe</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-ico">💬</div>
+          <div>
+            <div class="info-label">WhatsApp</div>
+            <div class="info-val">
+              <a href="https://wa.me/543464593104?text=Hola%20Mundo%20Limpieza!%20Quiero%20consultar%20por%20productos" target="_blank">3464-593104</a>
+            </div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-ico">🕐</div>
+          <div>
+            <div class="info-label">Horario de atención</div>
+            <div class="info-val">Lunes a Viernes: 8:00 – 12:30 y 16:00 – 20:00<br>Sábados: 8:00 – 13:00</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulario / panel WhatsApp -->
+      <div class="form-panel">
+        <h3>Mandanos tu consulta</h3>
+        <p>Completá tu nombre y consulta, y te respondemos por WhatsApp enseguida.</p>
+        <div class="form-group">
+          <input type="text" id="nombre" placeholder="Tu nombre" autocomplete="name">
+        </div>
+        <div class="form-group">
+          <input type="tel" id="telefono" placeholder="Tu teléfono (opcional)" autocomplete="tel">
+        </div>
+        <div class="form-group">
+          <textarea rows="4" id="consulta" placeholder="¿Qué producto estás buscando?"></textarea>
+        </div>
+        <a id="btnEnviarWA" class="btn-wa-form"
+           href="https://wa.me/543464593104?text=Hola%20Mundo%20Limpieza!%20Quiero%20consultar%20por%20productos"
+           target="_blank" rel="noopener">
+          <svg style="width:20px;height:20px;fill:white;flex-shrink:0" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Consultar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logo">
+    <img src="logo.jpeg" alt="Mundo Limpieza">
+    <span>MUNDO <em>LIMPIEZA</em></span>
+  </div>
+  <div class="footer-info">
+    <span>© 2026 <strong>Mundo Limpieza</strong> · Todos los derechos reservados</span>
+    <span>Bv. Ovidio Lagos 1365 · Casilda, Santa Fe · <span class="footer-azul">3464-593104</span></span>
+  </div>
+</footer>
+
+<script>
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+function closeMobile() {
+  mobileMenu.classList.remove('open');
+}
+document.addEventListener('click', (e) => {
+  if (!nav.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+const nav = document.querySelector('nav');
+
+// WhatsApp dinámico desde formulario
+const btnWA = document.getElementById('btnEnviarWA');
+function buildWALink() {
+  const nombre = document.getElementById('nombre').value.trim();
+  const consulta = document.getElementById('consulta').value.trim();
+  let msg = 'Hola Mundo Limpieza!';
+  if (nombre) msg += ' Soy ' + nombre + '.';
+  if (consulta) msg += ' Quiero consultar: ' + consulta;
+  else msg += ' Quiero consultar por productos.';
+  btnWA.href = 'https://wa.me/543464593104?text=' + encodeURIComponent(msg);
+}
+document.getElementById('nombre').addEventListener('input', buildWALink);
+document.getElementById('consulta').addEventListener('input', buildWALink);
+
+// Nav shadow on scroll
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 20) {
+    nav.style.boxShadow = '0 4px 30px rgba(0,55,95,0.12)';
+  } else {
+    nav.style.boxShadow = '0 2px 20px rgba(0,55,95,0.08)';
+  }
+});
+</script>
+</body>
+</html>
